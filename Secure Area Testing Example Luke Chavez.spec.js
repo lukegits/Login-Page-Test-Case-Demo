@@ -27,9 +27,7 @@ context('Login', () => {
           
           .get("input[name=password]").type("SuperSecretPassword!FAKE").type("{enter}")
 
-          // Check inputs work in the login username and password fields if the fields are incorrect.
-
-          // After the user hits enter check that login has not worked and the user is still on the main login page. They will recieve a toast message that the password/username combnination is invalid.
+          // After the user hits enter check that login has not worked and the user is still on the main login page. They will recieve a toast message that the password/username combination is invalid.
 
           .get('div').contains('Your username is invalid!', { matchCase: true })
 
@@ -55,7 +53,7 @@ context('Login', () => {
 
           .get('body > .row > #content > .example > .button').click()
 
-          // Check that the green toast message at the top is appearing properly and with the correct string.
+          // Check that the green toast message at the top of the page is appearing properly and with the correct string.
           
           .get('div').contains('You logged out of the secure area!', { matchCase: true })
 
